@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Drill 2</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                background-color: #f6bfd3;
+                margin: 0;
+                padding: 20px;
+            }
+            .container1 {
+                text-align: center;
+                margin: 40px auto 0 auto;
+                max-width: 500px;
+                background: #d86a99;
+                border-radius: 16px;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+                padding: 36px 28px 24px 28px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .container2 {
+                margin: 40px auto 0 auto;
+                max-width: 500px;
+                background: #f19fb9;
+                border-radius: 12px;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+                padding: 32px 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            table {
+                width: 100%;
+            }
+            td {
+                padding: 6px;
+            }
+            #output {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container1">
+            <h1>Here is my Student Profile using Python strings in PyScript!</h1>
+        </div>
+
+        <div class="container2">
+            <table>
+                <tr>
+                    <td style="text-align: right;"><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><label for="school">School:</label></td>
+                    <td><input type="text" id="school" /></td>
+                </tr>
+            </table>
+            <div style="display: flex; justify-content: center; gap: 16px; margin: 16px 0;">
+                <button py-click="display_info">Generate Message</button>
+                <button py-click="clear_content">Clear Content</button>
+            </div>
+            <div id="output" style="text-align: center; font-weight: bold;"></div>
+        </div>
+
+        <script type="py" src="main.py">
+        </script>
+    </body>
+</html>
